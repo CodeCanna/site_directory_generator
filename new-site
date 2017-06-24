@@ -1,0 +1,22 @@
+#!/bin/bash
+
+cd ~/programming/html
+if [ -z "$1" ]; then
+	figlet "Enter a site name YO!!"
+	exit 1
+else
+	mkdir $1
+	cd $1
+	mkdir js
+	mkdir css
+	cd js
+	touch index.js
+	cd ..
+	cd css
+	touch index.css
+	cd ..
+	touch index.html
+	echo "Site created!"
+fi
+
+
